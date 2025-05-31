@@ -9,7 +9,7 @@ const services = [
     title: 'Breakthrough Bootcamp',
     description:
       'Find meaning in your work or personal life and break free from stagnation and disappointment.',
-    href: '#',
+    href: '/services/breakthrough-bootcamp', // ✅ updated route
     color: 'bg-green-400',
     hoverColor: 'bg-green-400',
   },
@@ -17,7 +17,7 @@ const services = [
     title: 'Chaos to Clarity',
     description:
       'A high-impact 3-month program designed for agile professionals to navigate change and find clarity.',
-    href: '#',
+    href: '/services/chaos-to-clarity', // ✅ updated route
     color: 'bg-yellow-200',
     hoverColor: 'bg-yellow-200',
   },
@@ -25,11 +25,12 @@ const services = [
     title: 'Everyday Bliss',
     description:
       'A mindfulness journey to enhance emotional well-being, mental clarity, and intentional living.',
-    href: '#',
+    href: '/services/everyday-bliss', // ✅ updated route
     color: 'bg-blue-200',
     hoverColor: 'bg-blue-200',
   },
 ];
+
 
 export default function Services() {
   const [bgClass, setBgClass] = useState('');
