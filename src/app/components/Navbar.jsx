@@ -2,22 +2,22 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-
+import Image from 'next/image';
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
     { label: 'Home', href: '#hero' },
-    { label: 'Work With Me', href: '#services' },
+    { label: 'Services', href: '#services' },
     { label: 'About Me', href: '#about' },
-    { label: 'Blog', href: '#' }, // Placeholder
+    { label: 'Contact', href: '#Contact' }, // Placeholder
   ];
 
   return (
     <>
       {/* Top Navbar */}
       <nav className="w-full fixed top-0 left-0 bg-white shadow-sm px-6 md:px-16 py-4 flex justify-between items-center z-50">
-        <div className="text-lg font-semibold text-black">MPowerNest</div>
+        <div className="text-lg font-semibold text-black flex items-center justify-center gap-[10px]"><Image src="/logo.png" alt="MPowerNest" width={40} height={40} />MPowerNest</div>
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(true)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -52,7 +52,7 @@ export default function Navbar() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <div className="space-y-6 text-center">
+            <div className="space-y-6 text-center flex flex-col">
               {navItems.map((item, i) => (
                 <motion.a
                   key={i}

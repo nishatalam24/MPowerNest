@@ -8,7 +8,7 @@ const testimonials = [
     intro: 'Breakthrough transformation, aligned with inner peace.',
     quote:
       'Working with Madhu helped me break cycles of overthinking and find clarity in my purpose. I feel more aligned and emotionally balanced than ever.',
-    name: 'Riya Mehta',
+    name: 'Nishat ',
     title: 'Product Manager, Bangalore',
     bg: 'bg-green-300',
   },
@@ -17,7 +17,7 @@ const testimonials = [
     intro: 'True shift in mindset and emotional resilience.',
     quote:
       'The mindfulness practices brought me calm amidst corporate chaos. I now approach challenges with grounded clarity.',
-    name: 'Aditya Sharma',
+    name: 'Nishat ',
     title: 'Agile Coach, Pune',
     bg: 'bg-yellow-200',
   },
@@ -26,7 +26,7 @@ const testimonials = [
     intro: 'Everyday joy, deeply felt.',
     quote:
       'This journey gave me tools to find peace in my daily life. I no longer chase happiness, I live it.',
-    name: 'Neha Sinha',
+    name: 'Nishat ',
     title: 'Therapist, Delhi',
     bg: 'bg-blue-200',
   },

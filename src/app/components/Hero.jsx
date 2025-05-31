@@ -9,7 +9,10 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center"
+    // className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+
+    className='max-w-7xl mx-auto flex lg:flex-row flex-col flex-col-reverse  gap-8 items-center'
+
       >
         {/* Left: Green Box */}
         <motion.div

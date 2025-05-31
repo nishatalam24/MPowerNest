@@ -41,8 +41,8 @@ export default function CallToAction({
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Image src="/logo.svg" alt="MPowerNest Logo" width={32} height={32} />
-            <span className="font-semibold text-white">MPowerNest</span>
+            {/* <Image src="/logo.svg" alt="MPowerNest Logo" width={32} height={32} /> */}
+            <div className="text-lg text-white font-semibold text-black flex items-center justify-center gap-[10px]"><Image src="/logo.png" alt="MPowerNest" width={40} height={40} />MPowerNest</div>
           </div>
 
           {/* Navigation */}
