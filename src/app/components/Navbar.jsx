@@ -7,10 +7,10 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', href: '#hero' },
-    { label: 'Services', href: '#services' },
-    { label: 'About Me', href: '#about' },
-    { label: 'Contact', href: '#Contact' }, // Placeholder
+    { label: 'Home', href: '/#home' },
+    { label: 'Services', href: '/#services' },
+    { label: 'About Me', href: '/#about' },
+    { label: 'Contact', href: '/#contact' }, // Placeholder
   ];
 
   return (

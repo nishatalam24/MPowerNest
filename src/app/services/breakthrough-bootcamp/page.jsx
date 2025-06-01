@@ -45,7 +45,7 @@ export default function BreakthroughBootcamp() {
 
 
       {/* Features */}
- <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+ <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto px-6 md:px-16 py-12">
   {[
     { title: 'Sustainable Success', color: 'bg-[#FFB8B2]', desc: 'Create habits and mindsets for long-term growth.' },
     { title: 'Purposeful Living', color: 'bg-[#B9DDFF]', desc: 'Align your actions with your core values.' },
@@ -65,7 +65,10 @@ export default function BreakthroughBootcamp() {
 
 
       {/* Bootcamp Includes */}
-      <section className="bg-[#015C65] text-white rounded-2xl max-w-6xl  flex-row items-center justify-center gap-[40px] mx-auto my-12 p-8">
+
+      <section className='px-[10px] md:px-16  bg-white rounded-2xl mx-auto'>
+
+      <section className=" bg-[#015C65] text-white rounded-2xl max-w-6xl lg:flex flex-row items-center justify-center gap-[40px] mx-auto my-12 p-8">
         <h3 className="text-xl font-semibold mb-4">Included in your Bootcamp Month(s)</h3>
         <ul className="list-disc list-inside space-y-2 text-sm">
           <li>8× 60-minute deep-dive sessions</li>
@@ -76,6 +79,7 @@ export default function BreakthroughBootcamp() {
         </ul>
       </section>
 
+      </section>
 
         <>
       {/* other sections */}

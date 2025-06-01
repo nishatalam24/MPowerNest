@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section id="hero" className="  w-full px-6 md:px-16 py-25 bg-[#FEF186]">
+    <section id="home" className="  w-full px-6 md:px-16 py-25 bg-[#FEF186]">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
