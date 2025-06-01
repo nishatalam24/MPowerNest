@@ -34,20 +34,36 @@ const testimonials = [
 
 export default function Testimonials() {
   const containerRef = useRef(null);
-  const [paused, setPaused] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const scrollToIndex = (index) => {
+    if (containerRef.current) {
+      const container = containerRef.current;
+      const cardWidth = container.offsetWidth;
+      container.scrollTo({
+        left: index * cardWidth,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   useEffect(() => {
-    const scroll = () => {
-      if (!containerRef.current || paused) return;
-      containerRef.current.scrollLeft += 1;
-    };
+    const interval = setInterval(() => {
+      if (!isPaused) {
+        setActiveIndex((current) => {
+          const next = (current + 1) % testimonials.length;
+          scrollToIndex(next);
+          return next;
+        });
+      }
+    }, 2000); // Change slide every 5 seconds
 
-    const interval = setInterval(scroll, 20);
     return () => clearInterval(interval);
-  }, [paused]);
+  }, [isPaused]);
 
   return (
-    <section id="testimonials" className="py-20 px-6 md:px-16 bg-gray-50">
+ <section id="testimonials" className="py-20 px-6 md:px-16 bg-gray-50">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold">What Clients Say</h2>
         <p className="text-gray-600 mt-2 max-w-xl mx-auto">
@@ -55,35 +71,79 @@ export default function Testimonials() {
         </p>
       </div>
 
-      <div
-        ref={containerRef}
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-        className="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory px-1"
-        style={{ scrollBehavior: 'smooth' }}
-      >
-        {testimonials.map((t, i) => (
-          <div
-            key={i}
-            className={`snap-start rounded-2xl p-6 min-w-[85%] sm:min-w-[50%] md:min-w-[33%] transition-all duration-300 ${t.bg}`}
-          >
-            <div className="flex gap-4 items-center mb-4">
-              <Image
-                src={t.image}
-                alt={t.name}
-                width={50}
-                height={50}
-                className="rounded-full object-cover"
-              />
-              <div>
-                <h4 className="font-semibold text-black">{t.name}</h4>
-                <p className="text-sm text-gray-800">{t.title}</p>
+      <div className="relative max-w-6xl mx-auto">
+        <div
+          ref={containerRef}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          className="flex snap-x snap-mandatory overflow-hidden"
+        >
+          {testimonials.map((t, i) => (
+            <div
+              key={i}
+              className={`flex-none w-full md:w-1/2 lg:w-1/3 px-4 transition-all duration-300`}
+            >
+              <div className={`h-full rounded-2xl p-6 ${t.bg}`}>
+                <div className="flex gap-4 items-center mb-4">
+                  <Image
+                    src={t.image}
+                    alt={t.name}
+                    width={50}
+                    height={50}
+                    className="rounded-full object-cover"
+                  />
+                  <div>
+                    <h4 className="font-semibold text-black">{t.name}</h4>
+                    <p className="text-sm text-gray-800">{t.title}</p>
+                  </div>
+                </div>
+                <p className="font-semibold text-black mb-2">{t.intro}</p>
+                <blockquote className="italic text-gray-700">"{t.quote}"</blockquote>
               </div>
             </div>
-            <p className="font-semibold text-black mb-2">{t.intro}</p>
-            <blockquote className="italic text-gray-700">“{t.quote}”</blockquote>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Navigation Dots */}
+        <div className="flex justify-center gap-2 mt-6">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                setActiveIndex(i);
+                scrollToIndex(i);
+              }}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                activeIndex === i ? 'bg-blue-600 w-4' : 'bg-gray-300'
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={() => {
+            const prev = (activeIndex - 1 + testimonials.length) % testimonials.length;
+            setActiveIndex(prev);
+            scrollToIndex(prev);
+          }}
+          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md hover:bg-white"
+          aria-label="Previous slide"
+        >
+          ←
+        </button>
+        <button
+          onClick={() => {
+            const next = (activeIndex + 1) % testimonials.length;
+            setActiveIndex(next);
+            scrollToIndex(next);
+          }}
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md hover:bg-white"
+          aria-label="Next slide"
+        >
+          →
+        </button>
       </div>
     </section>
   );
