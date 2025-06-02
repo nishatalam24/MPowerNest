@@ -13,8 +13,8 @@ export default function CallToAction({
   ctaBgColor = '#68D391',      // CTA box background
 }) {
   return (
-    <footer className={`text-white py-12 px-4 sm:px-6 mt-20 w-full`} style={{ backgroundColor: bgColor }}>
-      <div className="max-w-6xl mx-auto w-full">
+    <footer className={`text-white py-12 px-4 sm:px-6 mt-20 w-full h-[90vh] flex flex-col items-center justify-center`} style={{ backgroundColor: bgColor }}>
+      <div className="max-w-6xl lg:max-w-[90vw]  w-full ">
 
         {/* CTA Section */}
         <motion.div
@@ -22,16 +22,16 @@ export default function CallToAction({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-center rounded-3xl px-6 py-12 md:py-16 shadow-lg flex flex-col items-center justify-center w-full"
+          className="text-center rounded-3xl px-6  lg:h-[70vh] py-12 md:py-16 shadow-lg flex flex-col items-center justify-center w-full"
           style={{ backgroundColor: ctaBgColor }}
         >
-          <p className="text-sm text-gray-100 mb-2">{preheading}</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{heading}</h2>
-          <p className="text-white max-w-xl mx-auto mb-6 text-sm md:text-base">
+          <p className="text-sm text-black font-[400] text-[20px] leading-[130%]   mb-2">{preheading}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 lg:font-[500] lg:text-[48px] lg:leading-[100%]">{heading}</h2>
+          <p className="text-[#000000A6] lg:text-[20px]  lg:font-[400] lg:leading-[130%] lg:max-w-[80%] mx-auto mb-6 text-sm md:text-base">
             {description}
           </p>
           <Link href={ctaHref}>
-            <button className="bg-white text-black px-6 py-2 md:px-8 md:py-3 rounded-full font-medium hover:bg-gray-100 transition">
+            <button className="bg-[#015C65] text-white px-6 py-2 md:px-8 md:py-3 rounded-full font-medium hover:bg-[#68D391] transition">
               {ctaLabel}
             </button>
           </Link>
@@ -47,17 +47,17 @@ export default function CallToAction({
 
           {/* Navigation */}
           <div className="flex flex-wrap gap-4 text-sm">
-            <Link href="#services">
+            <Link href="/#services">
               <span className="border px-4 py-2 rounded-full hover:bg-opacity-20 transition cursor-pointer">
                 Services
               </span>
             </Link>
-            <Link href="#about">
+            <Link href="/#about">
               <span className="border px-4 py-2 rounded-full hover:bg-opacity-20 transition cursor-pointer">
                 About Me
               </span>
             </Link>
-            <Link href="#contact">
+            <Link href="/#contact">
               <span className="border px-4 py-2 rounded-full hover:bg-opacity-20 transition cursor-pointer">
                 Contact
               </span>

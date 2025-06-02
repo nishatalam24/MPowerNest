@@ -9,24 +9,30 @@ export default function BreakthroughBootcamp() {
     <>
       {/* Hero Section */}
 <Navbar/>
-<section className="bg-[#EAF475] mt-[100px] p-6 md:p-10 rounded-3xl my-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+<section 
+className="bg-[#EAF475] mt-[100px] p-6 md:p-10 rounded-3xl my-10   mx-auto grid md:grid-cols-2 gap-8  
+
+lg:h-[90vh] lg:w-[95vw] flex flex-col justify-center items-center"
+>
   <motion.div
     initial={{ opacity: 0, x: -30 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.7 }}
     className="space-y-4"
   >
-    <h1 className="text-4xl font-bold">Breakthrough Bootcamp</h1>
-    <p className="font-medium">
+    <h1 className="text-4xl 
+    font-[500] text-[48px] leading-[100%]
+    ">Breakthrough Bootcamp</h1>
+    <p className="font-medium 
+    text-[20px]
+    ">
       A self accountable <strong>8 week programme</strong> for lasting personal transformation
     </p>
-    <p className="text-gray-700 font-medium">
-      Are you ready to make a significant shift in your life? This bootcamp helps clarify your purpose,
-      overcome obstacles, and build sustainable habits for long-term success.
+    <p className="text-gray-700 font-medium text-[20px]">
+      Are you ready to make a significant shift in your life? The Breakthrough Bootcamp is designed for individuals who are committed to creating meaningful and lasting change. Over a span of 8 weeks, we'll work together intensively to clarify your purpose, overcome obstacles, and develop the tools and mindset needed to achieve your goals.
     </p>
-    <p className="text-gray-700 font-medium">
-      Perfect for those feeling stuck or navigating transitions. Includes deep-dive sessions, personalized
-      action plans, and ongoing support.
+    <p className="text-gray-700 font-medium text-[20px]">
+     This programme is perfect for those feeling stuck, seeking greater fulfillment, or navigating major life transitions. Through a combination of deep-dive sessions, personalised action plans, and ongoing support, you'll unlock your potential and create sustainable habits for long-term success.
     </p>
   </motion.div>
 

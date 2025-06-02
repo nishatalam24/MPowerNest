@@ -29,13 +29,14 @@ export default function HomePage() {
 
       <section>
       <CallToAction
-        preheading="Ready to begin?"
+        preheading=""
         heading="Start Your Journey Today"
-        description="Let's schedule a discovery session to explore your transformation path."
+        description="We are here to help you reach your goals. Sign up for a free consultation today to
+discover how we can help you on your journey."
         ctaLabel="Let's Get Started"
         ctaHref="/contact"
         bgColor="#014045"
-        ctaBgColor="#68D391"
+        ctaBgColor="#EAF475"
       />
 
       </section>

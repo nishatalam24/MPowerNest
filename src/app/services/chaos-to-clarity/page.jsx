@@ -95,24 +95,31 @@ export default function ChaosToClarity() {
 
     <Navbar />
       {/* Hero */}
-<section className="bg-[#B9DDFF] mt-[100px] p-6 md:p-10 rounded-3xl my-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+{/* <section className="bg-[#B9DDFF] mt-[100px] p-6 md:p-10 rounded-3xl my-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center"> */}
+<section 
+className="bg-[#B9DDFF] mt-[100px] p-6 md:p-10 rounded-3xl my-10   mx-auto grid md:grid-cols-2 gap-8  
+
+lg:h-[90vh] lg:w-[95vw] flex flex-col justify-center items-center"
+>
   <motion.div
     initial={{ opacity: 0, x: -30 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.7 }}
     className="space-y-4"
   >
-    <h1 className="text-4xl font-bold">From Chaos to Clarity</h1>
-    <p className="font-medium font-[600]">
+    <h1 className="text-4xl 
+        font-[500] text-[48px] leading-[100%]
+    ">From Chaos to Clarity</h1>
+    <p className="font-semibold     text-[18px]">
      My signature program for Agile Corporate to navigate change, find your anchor, and thrive in uncertainty.
     </p>
-    <p className="text-gray-700 font-medium">
-   Are you feeling overwhelmed by constant change in your personal or professional life? Do you struggle to stay grounded when everything around you seems to be in flux? From Chaos to Clarity is designed for individuals, especially those in corporate environments, who are seeking stability and purpose amidst ongoing transitions.
+  <p className="text-gray-700 font-medium text-[20px]">
+ Are you feeling overwhelmed by constant change in your personal or professional life? Do you struggle to stay grounded when everything around you seems to be in flux? From Chaos to Clarity is designed for individuals, especially those in corporate environments, who are seeking stability and purpose amidst ongoing transitions.
     </p>
-    <p className="text-gray-700 font-medium">
+    <p className="text-gray-700 font-medium text-[20px]">
      This program will help you develop the mental agility and emotional resilience needed to not just survive, but thrive in today's fast-paced world. We'll work together to identify your core values, overcome limiting beliefs, and create strategies for maintaining focus and balance, no matter what challenges arise.
     </p>
-    <p className="text-gray-700 font-medium">
+    <p className="text-gray-700 font-medium text-[20px]">
 I encourage you to book a free clarity call with me to discuss your needs and make sure this program is right for you before proceeding.
     </p>
   </motion.div>

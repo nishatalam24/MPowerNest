@@ -12,13 +12,13 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="bg-gray-50 px-6 md:px-16 py-20">
+    <section id="about" className="bg-gray-50 px-6 lg:px-[0px] md:px-16 py-20 flex flex-col items-center ">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="max-w-6xl mx-auto flex flex-col lg:flex-row flex-col-reverse gap-12 items-center bg-[#FFB8B2] p-8 md:p-12 rounded-3xl shadow-sm"
+        className="max-w-6xl flex flex-col lg:flex-row flex-col-reverse gap-12 items-center bg-[#FFB8B2]  lg:max-w-[95vw] p-8 md:p-12 rounded-3xl shadow-sm"
       >
         {/* Left: Text */}
         <div className="w-full">
@@ -78,9 +78,9 @@ export default function About() {
           <Image
             src="/MadhuChandrasekaran1.jpeg"
             alt="Madhu Chandrasekaran"
-            width={400}
-            height={400}
-            className="rounded-2xl object-cover"
+            width={1000}
+            height={1000}
+            className="rounded-2xl object-cover lg:h-[80vh] :h-[80vh]"
           />
         </motion.div>
       </motion.div>

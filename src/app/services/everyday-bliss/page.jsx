@@ -114,9 +114,14 @@ export default function ChaosToClarity() {
     <Navbar />
       {/* Hero */}
 
-      <section className='bg-[#67D392] py-[2px] '>
+      <section className='  py-[2px] '>
 
-<section className="bg-[#FFB8B2] mt-[100px] h-[70vh] p-6 md:p-10 rounded-3xl my-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+{/* <section className="bg-[#FFB8B2] mt-[100px] h-[70vh] p-6 md:p-10 rounded-3xl my-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center"> */}
+<section 
+className="bg-[#FFB8B2] mt-[100px] p-6 md:p-10 rounded-3xl my-10   mx-auto grid md:grid-cols-2 gap-8  
+
+lg:h-[90vh] lg:w-[95vw] flex flex-col justify-center items-center"
+>
   <motion.div
     initial={{ opacity: 0, x: -30 }}
     whileInView={{ opacity: 1, x: 0 }}
