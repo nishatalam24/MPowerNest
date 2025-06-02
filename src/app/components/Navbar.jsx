@@ -7,7 +7,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', href: '/#home' },
+    { label: 'Home', href: '/' },
     { label: 'Services', href: '/#services' },
     { label: 'About Me', href: '/#about' },
     { label: 'Contact', href: '/#contact' }, // Placeholder
@@ -17,7 +17,12 @@ export default function Navbar() {
     <>
       {/* Top Navbar */}
       <nav className="w-full fixed top-0 left-0 bg-white shadow-sm px-6 md:px-16 py-4 flex justify-between items-center z-50">
+
+        <a href='/'>
+
         <div className="text-lg font-semibold text-black flex items-center justify-center gap-[10px]"><Image src="/logo.png" alt="MPowerNest" width={40} height={40} />MPowerNest</div>
+        </a>
+
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(true)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">

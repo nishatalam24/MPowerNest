@@ -42,7 +42,9 @@ export default function CallToAction({
           {/* Logo */}
           <div className="flex items-center gap-2">
             {/* <Image src="/logo.svg" alt="MPowerNest Logo" width={32} height={32} /> */}
+            <a href="/">
             <div className="text-lg text-white font-semibold text-black flex items-center justify-center gap-[10px]"><Image src="/logo.png" alt="MPowerNest" width={40} height={40} />MPowerNest</div>
+            </a>
           </div>
 
           {/* Navigation */}
