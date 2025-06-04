@@ -8,6 +8,9 @@ export default function CallToAction({
   heading = 'Journey to Your Best Self',
   description = "Let's chat! Our free call can uncover your needs and see if we're a good fit for each other.",
   ctaLabel = 'Book Discovery Session',
+  ctaLabelbgColor = '#015C65', // CTA button background color
+  ctaLabelbgColorHover = '#68D391',
+  ctaLabeltextColor = '#ffff', // CTA button text color
   ctaHref = '/#contact',
   bgColor = '#015C65',         // footer background
   ctaBgColor = '#68D391',      // CTA box background
@@ -30,11 +33,21 @@ export default function CallToAction({
           <p className="text-[#000000A6] lg:text-[20px]  lg:font-[400] lg:leading-[130%] lg:max-w-[80%] mx-auto mb-6 text-sm md:text-base">
             {description}
           </p>
-          <Link href={ctaHref}>
+          {/* <Link href={ctaHref}>
             <button className="bg-[#015C65] text-white px-6 py-2 md:px-8 md:py-3 rounded-full font-medium hover:bg-[#68D391] transition">
               {ctaLabel}
             </button>
-          </Link>
+          </Link> */}
+<Link href={ctaHref}>
+  <button 
+    className={`text-white px-6 py-2 md:px-8 md:py-3 rounded-full font-medium transition-colors duration-300 cursor-pointer`}
+    style={{ backgroundColor: ctaLabelbgColor,     color: ctaLabeltextColor }}
+    onMouseEnter={(e) => e.target.style.backgroundColor = ctaLabelbgColorHover}
+    onMouseLeave={(e) => e.target.style.backgroundColor = ctaLabelbgColor}
+  >
+    {ctaLabel}
+  </button>
+</Link>
         </motion.div>
 
         {/* Footer Nav */}

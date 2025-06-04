@@ -230,6 +230,9 @@ I encourage you to book a free clarity call with me to discuss your needs and ma
         ctaHref="/contact"
         bgColor="#014045"
         ctaBgColor="#68D391"
+          ctaLabelbgColor="#ffff"
+    ctaLabelbgColorHover="#cdcfd2"  
+  ctaLabeltextColor="#000000"
       />
     </>
   );

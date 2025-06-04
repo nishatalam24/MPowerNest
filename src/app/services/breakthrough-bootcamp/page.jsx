@@ -97,7 +97,12 @@ lg:h-[90vh] lg:w-[95vw] flex flex-col justify-center items-center"
   ctaHref="/contact"
   bgColor="#014045"
   ctaBgColor="#68D391"
+  ctaLabelbgColor="#ffff"
+    ctaLabelbgColorHover="#cdcfd2"  
+  ctaLabeltextColor="#000000"
 />
+
+
 
     </>
     </>
